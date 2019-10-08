@@ -14,7 +14,5 @@ RUN git clone https://github.com/morihisa/WOWHoneypot.git wowhoneypot
 RUN sed -i -e"s/hunt_enable=False/hunt_enable=True/" /opt/wowhoney/wowhoneypot/config.txt
 CMD sed -i -e"s/hunt_enable=False/hunt_enable=True/" /opt/wowhoney/wowhoneypot/config.txt
 
-RUN mkdir /opt/wowhoney/wowhoneypot/logs
-
 EXPOSE 8080
 ENTRYPOINT ["/opt/wowhoney/start-wow.sh"]
